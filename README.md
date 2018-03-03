@@ -7,7 +7,7 @@ Friend Finder implements friend matching based on the user's responses to a ten 
 2. View inventory
 3. Add to inventory
 4. Add a new product
-![alt text](https://github.com/lcervant2/bamazon-store/blob/master/bamazon-customer/images/Architecture1.png)
+![alt text](https://github.com/lcervant2/friendfinder/blob/master/images/finder.png?raw=true)
 
 _________________________
 
