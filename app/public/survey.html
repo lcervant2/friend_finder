@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Friend Finder Pro</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+  <style type="text/css">
+    form {
+      max-width: 420px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">FinderFriends</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/survey">Survey</a></li>
+        <li><a href="/api/friends">API Friends List</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <form id="survey-form" class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="photo" type="text" class="validate">
+          <label for="photo">Photo URL</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q1">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like fluffikins?</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q2">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like pets?</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q3">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like to traveled?</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q4">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like to cook?</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q5">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like to read?</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q6">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like to work?</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q7">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like to write?</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q8">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like cats?</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q9">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like to eat?</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="q10">
+            <option value="" selected>Choose your option</option>
+            <option value="1">Strongly disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">I don't know</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+          <label>Do you like fluffikins?</label>
+        </div>
+        <button class="waves-effect waves-light btn-large">Button</button>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('select').formSelect();
+
+      $('#survey-form').on('submit', (e) => {
+        e.preventDefault()
+        const selectFields = $('select')
+        const scores = selectFields.map((i, el) => el.value)
+
+        let data = {
+          name: $('#name').val(),
+          photo: $('#photo').val(),
+          scores: []
+        }
+
+        $.each(selectFields, (i, field) => data.scores.push(field.value))
+
+        $.ajax({
+          method: 'POST',
+          contentType: 'application/json',
+          url: 'http://localhost:3000/api/friends',
+          data: JSON.stringify(data)
+        })
+        .done(response => console.log(response))
+        .fail(err => console.log(err))
+      })
+    });
+  </script>
+</body>
+</html>
